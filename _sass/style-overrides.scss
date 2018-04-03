@@ -1,0 +1,24 @@
+h2 a:not(:hover) {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration-color: $primary-color;
+}
+a {
+    color: $primary-color;
+}
+video {
+    max-width: 100%;
+}
+figure {
+    justify-content: center;
+
+    img {
+        width: auto;
+    }
+
+    figcaption {
+        width: 100%;
+        text-align: center;
+    }
+}

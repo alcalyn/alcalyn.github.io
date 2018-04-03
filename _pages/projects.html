@@ -1,0 +1,16 @@
+---
+layout: archive
+title: "Projects"
+permalink: /projects/
+author_profile: true
+---
+
+{% capture written_label %}'None'{% endcapture %}
+
+{% for collection in site.collections %}
+    {% if collection.label == "projects" %}
+        {% for post in collection.docs %}
+            {% include archive-single.html %}
+        {% endfor %}
+    {% endif %}
+{% endfor %}
