@@ -1,0 +1,1 @@
+<i class="fa fa-{{ include.icon | default: 'font-awesome' }} {{ include.classes | default: '' }}" aria-hidden="true"></i>
