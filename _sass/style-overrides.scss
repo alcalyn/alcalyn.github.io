@@ -1,17 +1,22 @@
 body {
   font-family: 'Open Sans', sans-serif;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .page__title {
+  line-height: 1.5em;
   font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
 }
 h2 a:not(:hover) {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
     text-decoration: none;
+    color: $text-color;
 }
 a:hover {
-    text-decoration-color: $primary-color;
+    font-family: 'Open Sans', sans-serif;
 }
 a {
-    color: $primary-color;
+    font-family: 'Open Sans', sans-serif;
 }
 video {
     max-width: 100%;
@@ -29,8 +34,6 @@ figure {
     }
 }
 .page__content {
-  line-height: 1.4em;
-
   p, li, dl {
     font-size: 1em;
   }
