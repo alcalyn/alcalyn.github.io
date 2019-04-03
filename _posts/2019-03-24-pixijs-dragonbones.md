@@ -1,5 +1,9 @@
 ---
 title: Découverte de pixi.js pour animer un personnage avec Javascript
+locale: fr
+header:
+    image: /assets/images/pixijs-dragonbones/image-illustration-pixijs-dragonbones.jpg
+    image_description: Blender coa tools and dragonbonesJs
 tags:
     - javascript
 excerpt: Nous avons dessiné et animé un personnage, et développer en Javascript son mouvement pour qu'il suive la souris.
@@ -15,10 +19,10 @@ TL;DR:
 
 <iframe
     src="https://alcalyn.gitlab.io/game-draft/"
-    frameborder="0"
+    class="incrusted-iframe"
+    scrolling="no"
     width="630"
     height="400"
-    scrolling="no"
 ></iframe>
 
 L‘exemple ci-dessus est le rendu de la première étape qui a été d‘animer un personnage dans un navigateur, et de le lui faire suivre le pointeur (souris ou doigt).

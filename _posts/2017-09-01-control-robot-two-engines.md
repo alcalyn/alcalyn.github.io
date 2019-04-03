@@ -1,5 +1,6 @@
 ---
 title: Contrôler un robot à deux roues avec Raspberry Pi
+locale: fr
 tags:
     - raspberry-pi
 ---

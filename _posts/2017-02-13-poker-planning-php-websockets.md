@@ -1,5 +1,6 @@
 ---
 title: Creating a poker planning application with PHP and websockets
+locale: en
 tags:
     - php
 excerpt: Are you sure that PHP is not able to use websockets, send push notifications, and make a real-time application ?

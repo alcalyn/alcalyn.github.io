@@ -1,5 +1,6 @@
 ---
 title: Contrôlez votre Raspberry Pi depuis votre téléphone pour la rendre plus portable
+locale: fr
 excerpt: Vous utilisez déjà SSH pour contrôler votre Raspberry en ligne de commande. Mais si vous vous déplacez avec votre Raspberry ?
 tags:
     - raspberry-pi

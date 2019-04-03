@@ -1,5 +1,9 @@
 ---
 title: Set up continuous translation with Weblate and i18next
+locale: en
+header:
+    image: /assets/images/weblate-i18next/weblate-screenshot.jpg
+    image_description: Weblate with i18next
 tags:
     - javascript
 excerpt: I recently created a ReactJS project with i18next, and installed Weblate, a free/libre translation interface, to allow anyone help in translating the application.

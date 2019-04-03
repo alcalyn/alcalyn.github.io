@@ -1,5 +1,6 @@
 ---
 title: Sandstone explained to NodeJS, Python or PHP users
+locale: en
 tags:
     - php
 excerpt: If you're a NodeJS, Python or PHP user, you may already know expressJS, Flask or Silex. I'll explain Sandstone assuming you already know one of these libraries.
