@@ -6,7 +6,7 @@ header:
     image_description: Blender coa tools and dragonbonesJs
 tags:
     - javascript
-excerpt: Nous avons dessiné et animé un personnage, et développer en Javascript son mouvement pour qu'il suive la souris.
+excerpt: Nous avons dessiné et animé un personnage, et développé en Javascript son mouvement pour qu'il suive la souris.
 ---
 
 {% include toc title="Summary" %}
