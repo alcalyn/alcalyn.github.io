@@ -395,3 +395,5 @@ Mais si cela vous interesse et souhaitez vous y mettre, voilà les tutoriels/doc
 - [en] [Vidéos de présentation de Blender + coa tools](https://www.youtube.com/watch?v=uoQZV1f_J1s&list=PLPI26-KXCXpA-VMlDIWpmdq6M1m4LEjf_) (les premières vidéos sont faites avec une version ancienne du plugin, mais ca aide quand même)
 - [fr] [Tuto pour créer le squelette et les os de kinématique inverse](https://cgi.tutsplus.com/fr/tutorials/how-to-rig-a-2d-character-in-blender-for-cut-out-animation-or-explainer-videos-part-1--cms-26159) Ce tuto nous a bien aidé, mais seulement la deuxième moitié, la partie "Préparation de l'Armature et rigging" et après. La première moitié n'est plus à jour, le plugin ayant évolué.
 - [Exemples de démonstration développés avec DragonBonesJS](https://github.com/DragonBones/DragonBonesJS/tree/master/Pixi/Demos) On peut cloner et installer ce projet, et jouer avec les exemples. Ca m'a servi pour voir des exemples de code DragonBonesJS.
+
+{% include ccby %}
