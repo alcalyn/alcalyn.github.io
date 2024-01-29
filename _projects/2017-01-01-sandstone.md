@@ -51,12 +51,12 @@ This edition integrates:
 
 Check it out:
 
-{% include fa icon="github" classes="fa-lg" %} [Sandstone edition](https://github.com/eole-io/sandstone-edition)
+{% include fa icon="code" classes="fa-lg" %} [Sandstone edition](https://github.com/eole-io/sandstone-edition)
 
 
 Or you can start from scratch or integrate it in an existing Silex application:
 
-{% include fa icon="github" classes="fa-lg" %} [Sandstone](https://github.com/eole-io/sandstone)
+{% include fa icon="code" classes="fa-lg" %} [Sandstone](https://github.com/eole-io/sandstone)
 
 {% include fa icon="book" classes="fa-lg" %} [Sandstone documentation](https://eole-io.github.io/sandstone/)
 

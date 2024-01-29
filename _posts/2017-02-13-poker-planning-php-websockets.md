@@ -869,7 +869,7 @@ ab.connect(
 
 The full front and back application can be installed and tested here:
 
-{% include fa icon="github" classes="fa-lg" %} [Poker Planning](https://github.com/alcalyn/poker-planning)
+{% include fa icon="code" classes="fa-lg" %} [Poker Planning](https://github.com/alcalyn/poker-planning)
 
 
 {% include ccby %}
