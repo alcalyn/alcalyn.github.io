@@ -9,7 +9,7 @@ header:
     overlay_filter: 0
 ---
 
-TLDR: [Play Hex: https://hex.alcalyn.app/](https://hex.alcalyn.app/)
+TLDR: [Play Hex: https://playhex.org](https://playhex.org)
 
 I developed a platform to play Hex online, against an other player, or vs an AI.
 
@@ -24,7 +24,7 @@ Check it out:
 
 {% include fa icon="code" classes="fa-lg" %} [Github repo](https://github.com/alcalyn/hex)
 
-{% include fa icon="gamepad" classes="fa-lg" %} [Play Hex online](https://hex.alcalyn.app/)
+{% include fa icon="gamepad" classes="fa-lg" %} [Play Hex online](https://playhex.org)
 
 
 {% include ccby %}
