@@ -1,0 +1,3 @@
+[submodule "themes/rusty-poison"]
+	path = themes/rusty-poison
+	url = https://github.com/RustyDaemon/rusty-poison.git

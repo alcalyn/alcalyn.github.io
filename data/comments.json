@@ -1,0 +1,203 @@
+{
+  "posts/control-robot-two-engines": [
+    {
+      "author": "Mélanie",
+      "date": "2017-09-13T20:28:39Z",
+      "message": "<p>Je suis débutante en électronique et je trouve cet article clair et bien détaillé ! Plus qu'à passer à la pratique. :)</p>",
+      "replies": []
+    },
+    {
+      "author": "Loïck Perreard",
+      "date": "2018-03-16T15:55:44Z",
+      "message": "<p>bonjour , je suis un eleve de Terminale S/SI en pleine realisation de mon PPE , cet article est tres interessant , je n'ai juste pas compris d'ou on l'on controlait le robot , depuis quelle plateforme ? a moins que ce dernier soit automatique .. <br>cordialement</p>",
+      "replies": [
+        {
+          "author": "Julien Maulny",
+          "date": "2018-03-17T16:04:04Z",
+          "message": "<p>Salut, en effet, j'ai écrit cet article en partant du principe que le lecteur possède une Raspberry Pi, a installé Raspbian dessus et sait y lancer un script Python.</p><p>J'ai donc une Raspberry Pi (un mini-ordinateur), et le code Python qu'il y a dans cet article, je l'ai en fait mis dans un fichier de la Raspberry, et je le lance ensuite avec par exemple en ligne de commande : `python <a href=\"http://mon-fichier.py\" rel=\"nofollow noopener\" target=\"_blank\" title=\"mon-fichier.py\">mon-fichier.py</a>`.</p><p>Pour mettre le code dans la Raspberry, on peut le faire soit en branchant un écran et un clavier sur la Raspberry, soit en la controlant à distance en SSH (mais cela requiert d'avoir d'abord installé un serveur SSH dessus).</p><p>Je controle donc ma Raspberry à distance grâce à une connexion SSH depuis mon ordi, mais on peut travailler directement dessus avec un écran HDMI et clavier USB.</p><p>Je pourrais aider d'avantage si tu me dis ce que tu as déjà essayé de faire. Bon codage !</p>",
+          "replies": []
+        }
+      ]
+    },
+    {
+      "author": "Louis Virolle",
+      "date": "2018-03-19T14:21:57Z",
+      "message": "<p>Bonjour, je souhaiterais savoir si il était possible de contrôler le robot par l'intermédiaire d'un site web. Je m'explique, le Rasbperry contient le code python et je souhaiterais activer par le biais d'un bouton présent sur un site web en javascript le programme du robot, bien entendu le Rasbperry étant connecter sur le même réseau internet que l'ordinateur.</p><p>Cordialement</p>",
+      "replies": [
+        {
+          "author": "Julien Maulny",
+          "date": "2018-03-19T14:47:33Z",
+          "message": "<p>Oui c'est possible.</p><p>De manière générale, le robot doit héberger un serveur qui peut accepter des requêtes, par exemple `POST /move`, et ce serveur execute le script python qui actionne les roues.</p><p>Pour un serveur web full python, il y a par exemple le microframework Flask (<a href=\"http://flask.pocoo.org/\" rel=\"nofollow noopener\" target=\"_blank\" title=\"http://flask.pocoo.org/\">http://flask.pocoo.org/</a> ) qui permet de monter un serveur web léger, et d'accepter des requêtes HTTP. Il suffira de créer une route, par exemple `/move`, et dans le contrôleur, d'actionner les roues.</p><p>Ensuite le bouton en javascript devra lancer la requête HTTP en ajax, ou en rafraichissant la page, ou encore un formulaire avec un submit... pour appeler la route `/move`</p><p>Ou, pour un serveur web Apache/PHP, un script php, par exemple move.php, peut executer le script python qui actionne les roues. Il suffit ensuite d'ouvrir la page /move.php sur un navigateur pour faire bouger le robot.</p><p>Plus qu'a mettre le serveur web en ligne, et il est possible de controler le robot de l'autre bout du monde !</p>",
+          "replies": []
+        }
+      ]
+    },
+    {
+      "author": "Arthur Aniel",
+      "date": "2018-05-21T15:44:11Z",
+      "message": "<p>bonjour , je suis élève en prépa PTSI et j'aimerai savoir si il est possible d'alimenter un servo moteur sans qu'il soit branché directement au raspberry (pour les problèmes) de tension insuffisante que tu as cité )  <br>Et si cela est possible , saurais tu ce qu'il faudrait programmer sur python . <br>cordialement et PS: ton article est très bien fait .</p>",
+      "replies": [
+        {
+          "author": "Julien Maulny",
+          "date": "2018-05-22T12:01:43Z",
+          "message": "<p>Merci :)</p><p>En effet, en branchant les bornes du moteur sur 2 pins de la Raspberry Pi, le moteur va prendre tellement de courant qu'au final c'est comme si les pins étaient en court-circuit.</p><p>C'est pour cela que j'utilise ici le circuit intégré L293D, je l'explique dans cette section : <a href=\"https://alcalyn.github.io/control-robot-two-engines/#le-circuit-int%C3%A9gr%C3%A9-l293d\" rel=\"nofollow noopener\" target=\"_blank\" title=\"https://alcalyn.github.io/control-robot-two-engines/#le-circuit-int%C3%A9gr%C3%A9-l293d\">https://alcalyn.github.io/c...</a></p><p>Ce circuit sera contrôlé par les pins de la Raspberry, mais alimentera le moteur avec les piles.</p><p>Le code Python permettant de contrôler le circuit L293D ressemblera à celui que j'ai mis à la fin de l'article : <a href=\"https://alcalyn.github.io/control-robot-two-engines/#cest-parti-pour-la-programmation\" rel=\"nofollow noopener\" target=\"_blank\" title=\"https://alcalyn.github.io/control-robot-two-engines/#cest-parti-pour-la-programmation\">https://alcalyn.github.io/c...</a></p>",
+          "replies": []
+        }
+      ]
+    },
+    {
+      "date": "2019-07-17T13:07:05Z",
+      "deleted": true,
+      "replies": [
+        {
+          "author": "Julien Maulny",
+          "date": "2019-07-17T13:39:41Z",
+          "message": "<p>En effet il semble qu'il y ait un problème de branchement.</p><p>&gt; \"... et j'alimente mon raspberry pi grâce au l298n\"<br>Le circuit n'alimente pas la raspberry, elle doit être alimentée par une alim externe (secteur ou batterie 5V). C'est la RPI qui alimente le circuit logique de la l298n (puis les piles qui alimentent les moteurs via la l298n). Les piles peuvent alimenter la l298n à la place de la rpi, pour cela il faut laisser le jumper, sinon il faut le retirer.</p><p>Là comme ca je vois deux trois trucs à vérifier :</p><p>- As tu bien retiré le jumper de la L298N, sinon les 9V des piles risquent \"rentrer\" dans la PI car tension inférieure<br>- T'as pas un court circuit au niveau des fils des moteurs qui fait que 2 pins de la Pi seraient connecté entre eux</p><p>Sinon tu peux essayer de débrancher la raspberry du l298n et de l'alimenter séparément, mais en gardant quand même la masse connectée au l298n (pour la partager avec la masse des piles.</p><p>Tu peux aussi essayer de brancher qu'un moteur, puis l'autre pour essayer d'isoler le court circuit.</p><p>Sinon tu débranches tout et refais le montage de zéro :p</p><p>Si t'as toujours le cas envoies une photo du montage</p>",
+          "replies": [
+            {
+              "date": "2019-07-17T14:23:03Z",
+              "deleted": true,
+              "replies": [
+                {
+                  "author": "Julien Maulny",
+                  "date": "2019-07-17T14:36:43Z",
+                  "message": "<p>Ah alors si avec le jumper retiré, le circuit est ouvert, c'est une piste.</p><p>En retirant le jumper, il faut juste ajouter un fil entre le +5V et la l298n et le +5V de la raspberry. Avec le jumper, il faut retirer ce fil. Normalement c'est la seule difference.</p><p>Normalement en retirant tout, jumper enlevé, si tu relies juste le +5V et masse de la rpi au l298n, la diode du l298n doit s'allumer quand la rpi est allumée.</p><p>A partir de là, tu peux brancher les piles sur le +12V et la masse dans le même 0V, rien ne doit bouger.</p>",
+                  "replies": []
+                }
+              ]
+            },
+            {
+              "date": "2019-07-17T14:31:10Z",
+              "deleted": true,
+              "replies": [
+                {
+                  "author": "Julien Maulny",
+                  "date": "2019-07-17T14:45:26Z",
+                  "message": "<p>Ca à l'air bon, j'ai fait le même montage de souvenir. Non je pense qu'il faut brancher étape par étape pour voir quand ca plante.</p><p>- Jumper retiré,<br>- +5 et masse de la rpi au l298n, la diode s'allume<br>- piles au +12 et masse, la diode s'allume toujours<br>- un premier moteur, il doit tourner<br>- le deuxième</p>",
+                  "replies": [
+                    {
+                      "date": "2019-07-17T14:49:21Z",
+                      "deleted": true,
+                      "replies": [
+                        {
+                          "author": "Julien Maulny",
+                          "date": "2019-07-17T14:50:38Z",
+                          "message": "<p>Oui alim secteur. Ensuite sur le robot j'utilise une batterie 5V pour l'alimenter, la batterie usb qui sert à charger les telephones.</p><p>Du coup oui, sur le robot j'ai piles pour moteurs + batterie pour rpi</p>",
+                          "replies": [
+                            {
+                              "date": "2019-07-17T14:52:44Z",
+                              "deleted": true,
+                              "replies": [
+                                {
+                                  "author": "Julien Maulny",
+                                  "date": "2019-07-17T14:55:21Z",
+                                  "message": "<p>Une alimentation secteur ? La batterie usb c'est pas obligé, c'est que quand je veux remplacer l'alim secteur par un truc plus portable</p>",
+                                  "replies": [
+                                    {
+                                      "date": "2019-07-17T14:57:05Z",
+                                      "deleted": true,
+                                      "replies": [
+                                        {
+                                          "author": "Julien Maulny",
+                                          "date": "2019-07-17T15:02:28Z",
+                                          "message": "<p>:D</p><p>Sinon quand ca marchera, pour faire sans la batterie usb, il faudra retirer le +5V entre la rpi et la l298n, et mettre le jumper</p>",
+                                          "replies": [
+                                            {
+                                              "date": "2019-07-17T15:07:05Z",
+                                              "deleted": true,
+                                              "replies": [
+                                                {
+                                                  "author": "Julien Maulny",
+                                                  "date": "2019-07-17T15:18:48Z",
+                                                  "message": "<p>En fait je pense que c'est ca le truc. Dans ton montage, t'alimente pas la raspberry. Elle s'allume avec le \"surplus\" de courant du circuit logique de la l298n qui est alimenté par les piles + régulateur. Mais c'est pas suffisant : si ta rpi s’éteint, c'est parce que le l298n ne fournit pas assez d'intensité à la rpi (car pas prévu pour), qui peut en demander beaucoup plus (plus d'un ampère).</p><p>Tu disais \"... et j'alimente mon raspberry pi grâce au l298n\", c'est la source du problème.</p><p>En fait c'est pas dans le bon sens, c'est bien la rpi qui doit d'abord être alimentée, puis le l298n doit être ensuite alimenté soit par la rpi, soit par les piles (avec le jumper).</p>",
+                                                  "replies": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "posts/poker-planning-php-websockets": [
+    {
+      "author": "Thomas Fuchs",
+      "date": "2017-09-25T17:50:00Z",
+      "message": "<p>Really interesting blog. As the author of <a href=\"http://www.scrumpoker.online\" rel=\"nofollow noopener\" target=\"_blank\" title=\"www.scrumpoker.online\">www.scrumpoker.online</a> I was curious where my project was linked, so I took a look.</p>",
+      "replies": []
+    }
+  ],
+  "posts/set-up-continuous-translation-i18next-weblate": [
+    {
+      "author": "Kai Ivo",
+      "date": "2018-12-20T10:17:28Z",
+      "message": "<p>Thank you for the tutorial. Just one thing: The manual on how to install weblate with docker is completly wrong. I doubt that you have done it exactly like, because it just does not work.</p>",
+      "replies": [
+        {
+          "author": "Julien Maulny",
+          "date": "2018-12-20T13:00:42Z",
+          "message": "<p>Hello, thank you, I checked it out, and Weblate/docker changed a little.</p><p>I updated my post, so it is now updated.</p><p>But for sure, it still may change in the future, this is why I linked to <br>the official Weblate documentation in many part of the tutorial, which is not an official documentation to install and use Weblate, but an example to make it work with i18next.</p>",
+          "replies": []
+        }
+      ]
+    },
+    {
+      "author": "Olivia Paquay",
+      "date": "2019-05-24T12:56:35Z",
+      "message": "<p>Hey, merci pour ton article. Je suis tombée dessus par hasard en me renseignant sur i18next et c'est exactement ce qu'il me faut ! Par contre, quand je crée une nouvelle traduction via l'interface weblate, il crée un nouveau fichier avec les valeurs en string vides, ce qu'i18next ne considère pas comme du contenu non traduit (il ne prend pas le fallback mais affiche des strings vide). Connais-tu une solution pour cela ?</p>",
+      "replies": [
+        {
+          "author": "Julien Maulny",
+          "date": "2019-05-24T13:30:22Z",
+          "message": "<p>Salut,</p><p>Tu veux dire que quand tu as ajouté une nouvelle langue, que tu as commencé a traduire, que ton fichier de traduction ressemble à ça :</p><p><code><br>{<br>  \"game_menu\": {<br>    \"turn_number\": \"\",<br>    \"undo\": \"\",<br>     \"end_turn\": \"\"<br>   },<br>   \"kingdom_menu\": \"\",<br>   ...<br>}<br></code></p><p>Et que du coup en switchant sur cette langue, toutes les chaînes sont vides au lieu de prendre la langue par défaut ?</p><p>Si oui, j'ai aussi eu ce cas, j'ai résolu ce problème avec `returnEmptyString`, en le mettant à false :) Regarde là : <a href=\"https://www.i18next.com/overview/configuration-options#translation-defaults\" rel=\"nofollow noopener\" target=\"_blank\" title=\"https://www.i18next.com/overview/configuration-options#translation-defaults\">https://www.i18next.com/ove...</a></p><p>Par exemple, voilà les options que je passe à i18next :</p><p><code><br>{<br>  fallbackLng: 'en',<br>  returnEmptyString: false,<br>  defaultNS: 'translation',<br>  detection: {<br>    order: ['querystring', 'navigator'],<br>    lookupQuerystring: 'lng'<br>  },<br>}<br></code></p>",
+          "replies": [
+            {
+              "author": "Olivia Paquay",
+              "date": "2019-05-24T13:38:58Z",
+              "message": "<p>Super, ça fonctionne. Merci :-)</p>",
+              "replies": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "projects/sandstone": [
+    {
+      "author": "Sergio",
+      "date": "2018-03-27T07:16:07Z",
+      "message": "<p>Hi Julien, i am a new Symfony 3.3 developer and i would like to know if i can use Sandstone in a Symfony 3.3 project.</p><p>Will there be any problem if i add Sandstone to Symfony?</p><p>I need to receive data from an outside application using API REST and then do a broadcast to clients using websockets.</p><p>Can i use Sandstone in this way?</p><p>Thank you very much.</p>",
+      "replies": [
+        {
+          "author": "Julien Maulny",
+          "date": "2018-03-27T08:52:24Z",
+          "message": "<p>Hello,</p><p>If you already have a Symfony application, you don't need Sandstone. You may be interested in WebsocketBundle: <a href=\"https://github.com/GeniusesOfSymfony/WebSocketBundle\" rel=\"nofollow noopener\" target=\"_blank\" title=\"https://github.com/GeniusesOfSymfony/WebSocketBundle\">https://github.com/Geniuses...</a></p><p>Coupling it with FOSRestBundle, and you have a Rest Api and a websocket server. So when you receive a RestApi call, you can send a message from rest api to websocket server with Push (zmq, amqp) feature that websocket bundle provides. Then you can broadcast your message to websockets clients.</p><p>Sandstone uses the same workflow, but is a microframework, like a lightweight Symfony (Sandstone in based on Silex).</p>",
+          "replies": [
+            {
+              "author": "Sergio",
+              "date": "2018-03-27T09:14:36Z",
+              "message": "<p>Ok, i'll do that.</p><p>Thanks for replying :)</p>",
+              "replies": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

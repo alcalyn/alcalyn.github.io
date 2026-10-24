@@ -1,0 +1,5 @@
+{{- /* Comments archived from Disqus, read from data/comments.json by bundle path */ -}}
+{{- with index hugo.Data.comments (path.Dir .Page.File.Path) -}}
+  <h2 id="comments">{{ i18n "comments" }}</h2>
+  {{ partial "comments-tree.html" . }}
+{{- end -}}

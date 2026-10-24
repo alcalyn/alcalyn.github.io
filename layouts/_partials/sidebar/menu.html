@@ -1,0 +1,17 @@
+<nav class="panel-section" aria-label="Primary">
+    <div class="panel-section-label">// nav</div>
+    <a href="{{ .Site.BaseURL }}" class="panel-link {{ if .IsHome }}active{{ end }}">home</a>
+    {{ range .Site.Params.menu }}
+        {{ $url := .URL }}
+        <a href="{{ $url }}" class="panel-link {{ if and (ne $.RelPermalink "/") (hasPrefix $.RelPermalink $url) }}active{{ end }}">{{ .Name }}</a>
+    {{ end }}
+    {{/* Link to the translation of the current page, or to the other language home */}}
+    {{ range hugo.Sites }}
+        {{ if ne .Language.Lang $.Lang }}
+            {{ $target := .Home }}
+            {{ $lang := .Language.Lang }}
+            {{ range $.Translations }}{{ if eq .Lang $lang }}{{ $target = . }}{{ end }}{{ end }}
+            <a href="{{ $target.RelPermalink }}" class="panel-link" hreflang="{{ $lang }}">{{ .Language.Label | lower }}</a>
+        {{ end }}
+    {{ end }}
+</nav>

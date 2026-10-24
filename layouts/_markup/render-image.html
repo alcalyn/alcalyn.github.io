@@ -1,0 +1,68 @@
+{{- $src := .Destination -}}
+{{- $alt := .PlainText -}}
+{{- $title := .Title -}}
+{{- $isRemote := or (hasPrefix $src "http://") (hasPrefix $src "https://") (hasPrefix $src "//") (hasPrefix $src "data:") -}}
+{{- $img := "" -}}
+{{- if not $isRemote -}}
+    {{- with .Page.Resources.GetMatch $src -}}
+        {{- $img = . -}}
+    {{- else -}}
+        {{- with resources.Get $src -}}
+            {{- $img = . -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{{- if and $img (in (slice "image/jpeg" "image/png" "image/webp" "image/gif") $img.MediaType.Type) -}}
+    {{- $maxW := 1200 -}}
+    {{- $w := $img.Width -}}
+    {{- if gt $w $maxW -}}
+        {{- $img = $img.Resize (printf "%dx" $maxW) -}}
+        {{- $w = $maxW -}}
+    {{- end -}}
+    {{- $h := $img.Height -}}
+
+    {{- $sizes := slice -}}
+    {{- range slice 480 768 1200 -}}
+        {{- if le . $w -}}
+            {{- $sizes = $sizes | append . -}}
+        {{- end -}}
+    {{- end -}}
+    {{- if not (in $sizes $w) -}}
+        {{- $sizes = $sizes | append $w -}}
+    {{- end -}}
+
+    {{- $jpegSet := slice -}}
+    {{- $webpSet := slice -}}
+    {{- /* Fixed from the theme: inside "with", "." is the webp image, not the width, which produced an invalid srcset */ -}}
+    {{- range $size := $sizes -}}
+        {{- $r := $img.Resize (printf "%dx" $size) -}}
+        {{- $jpegSet = $jpegSet | append (printf "%s %dw" $r.RelPermalink $size) -}}
+        {{- with $r.Resize (printf "%dx webp" $size) -}}
+            {{- $webpSet = $webpSet | append (printf "%s %dw" .RelPermalink $size) -}}
+        {{- end -}}
+    {{- end -}}
+
+    <figure class="post-image">
+      <picture>
+        {{- if $webpSet }}<source type="image/webp" srcset="{{ delimit $webpSet ", " }}" sizes="(max-width: 720px) 100vw, 720px">{{ end }}
+        <img
+          src="{{ $img.RelPermalink }}"
+          srcset="{{ delimit $jpegSet ", " }}"
+          sizes="(max-width: 720px) 100vw, 720px"
+          width="{{ $w }}"
+          height="{{ $h }}"
+          alt="{{ $alt }}"
+          loading="lazy"
+          decoding="async"
+          {{ with $title }}title="{{ . }}"{{ end }}
+        >
+      </picture>
+      {{- with $title }}<figcaption>{{ . }}</figcaption>{{ end }}
+    </figure>
+{{- else -}}
+    <figure class="post-image">
+      <img src="{{ $src | safeURL }}" alt="{{ $alt }}" loading="lazy" decoding="async" {{ with $title }}title="{{ . }}"{{ end }}>
+      {{- with $title }}<figcaption>{{ . }}</figcaption>{{ end }}
+    </figure>
+{{- end -}}

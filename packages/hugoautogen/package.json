@@ -1,0 +1,13 @@
+{
+  "dependencies": {},
+  "devDependencies": {
+    "@tailwindcss/cli": "4.2.4",
+    "mermaid": "11.15.0",
+    "pagefind": "1.5.2",
+    "svg-pan-zoom": "3.6.2",
+    "tailwindcss": "4.2.4"
+  },
+  "name": "hugoautogen",
+  "private": true,
+  "version": "0.1.0"
+}

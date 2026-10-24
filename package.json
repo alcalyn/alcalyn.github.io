@@ -1,0 +1,10 @@
+{
+  "workspaces": [
+    "packages/hugoautogen"
+  ],
+  "scripts": {
+    "dev": "hugo server",
+    "build": "hugo --gc --minify --cleanDestinationDir && pagefind --site public",
+    "preview": "hugo --gc --minify --cleanDestinationDir --baseURL http://localhost:8000/ && pagefind --site public && python3 -m http.server 8000 -d public"
+  }
+}

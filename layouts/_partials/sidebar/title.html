@@ -1,0 +1,35 @@
+<div class="panel-brand">
+    {{ with (or .Site.Params.remote_brand_image .Site.Params.brand_image) }}
+        <a href="{{ $.Site.BaseURL }}" aria-label="Home">
+            <img src="{{ . }}" alt="{{ $.Site.Params.brand | default $.Site.Title }}" width="60" height="60">
+        </a>
+    {{ end }}
+    <div class="prompt">~/alcalyn $</div>
+    {{ with (or .Site.Params.brand .Site.Title) }}
+        <div class="panel-brand-title"><a href="{{ $.Site.BaseURL }}">{{ . }}</a></div>
+    {{ end }}
+    {{ with .Site.Params.tagline }}
+        <p class="lead">{{ . | safeHTML }}</p>
+    {{ end }}
+</div>
+
+{{/* The site name is not a <h1>, so that each page has a single <h1>: its own title.
+     Same styles as the theme's ".panel-brand h1". */}}
+<style>
+  .panel-brand .panel-brand-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: -0.01em;
+    color: var(--color-panel-fg);
+  }
+  @media (max-width: 55.99em) {
+    .panel-brand .panel-brand-title {
+      font-size: 1rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-width: 0;
+    }
+  }
+</style>

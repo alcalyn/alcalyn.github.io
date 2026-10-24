@@ -1,0 +1,11 @@
+{{- /* Usage: {{< video src="a.mp4,a.webm" >}}fallback text{{< /video >}} */ -}}
+<video width="640" height="360" controls>
+  {{- range split (.Get "src") "," }}
+    {{- with $.Page.Resources.Get . }}
+      <source src="{{ .RelPermalink }}" type="{{ .MediaType.Type }}">
+    {{- else }}
+      {{- errorf "video: resource %q not found in %s" . $.Page.File.Path }}
+    {{- end }}
+  {{- end }}
+  {{ .Inner }}
+</video>

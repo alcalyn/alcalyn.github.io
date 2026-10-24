@@ -1,0 +1,15 @@
+<ul style="list-style: none; padding-left: 0">
+  {{- range . }}
+    <li style="margin-top: 1rem; padding-left: 1rem; border-left: 2px solid var(--border)">
+      {{- if .deleted }}
+        <p><em>{{ i18n "commentDeleted" }}</em></p>
+      {{- else }}
+        <p><strong>{{ .author }}</strong> · <time datetime="{{ .date }}">{{ time.Format ":date_long" .date }}</time></p>
+        {{ .message | safeHTML }}
+      {{- end }}
+      {{- with .replies }}
+        {{ partial "comments-tree.html" . }}
+      {{- end }}
+    </li>
+  {{- end }}
+</ul>

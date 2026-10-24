@@ -1,0 +1,16 @@
+{{- /* Grid of images listed in the front matter under the given id. The "post-image" class enables the theme lightbox. */ -}}
+{{- $page := .Page -}}
+<figure class="post-image">
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.5rem">
+    {{- range $item := index $page.Params (.Get "id") }}
+      {{- with $page.Resources.Get $item.image_path }}
+        <img src="{{ .RelPermalink }}" alt="{{ $item.alt }}" title="{{ $item.title }}" loading="lazy">
+      {{- else }}
+        {{- errorf "gallery: resource %q not found in %s" $item.image_path $page.File.Path }}
+      {{- end }}
+    {{- end }}
+  </div>
+  {{- with .Get "caption" }}
+    <figcaption>{{ . }}</figcaption>
+  {{- end }}
+</figure>

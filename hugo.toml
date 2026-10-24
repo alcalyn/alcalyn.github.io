@@ -1,0 +1,70 @@
+baseURL = 'https://alcalyn.github.io/'
+title = "Alcalyn's blog"
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = true
+theme = 'rusty-poison'
+enableEmoji = true
+
+[pagination]
+  pagerSize = 20
+
+[languages]
+  [languages.en]
+    locale = 'en-us'
+    label = 'English'
+    weight = 1
+    [languages.en.params]
+      description = "Alcalyn's blog, about web, PHP and Raspberry Pi."
+      rss_section = 'en/posts'
+      menu = [
+        {Name = 'posts', URL = '/en/posts/'},
+        {Name = 'projects', URL = '/en/projects/'},
+        {Name = 'tags', URL = '/en/tags/'},
+      ]
+
+  [languages.fr]
+    locale = 'fr-fr'
+    label = 'Français'
+    weight = 2
+    [languages.fr.params]
+      description = "Le blog d'Alcalyn, sur le web, PHP et le Raspberry Pi."
+      rss_section = 'fr/posts'
+      menu = [
+        {Name = 'articles', URL = '/fr/posts/'},
+        {Name = 'projets', URL = '/fr/projects/'},
+        {Name = 'tags', URL = '/fr/tags/'},
+      ]
+
+[params]
+  brand = "Alcalyn's blog"
+  tagline = '// web, PHP, Raspberry Pi'
+  showDarkLight = true
+  front_page_content = ['posts']
+
+  github_url = 'https://github.com/alcalyn'
+  twitter_url = 'https://twitter.com/alcalyn_'
+  email_url = 'mailto:julien.maulny@protonmail.com'
+  rss_icon = true
+
+  [params.author]
+    name = 'Julien Maulny'
+
+[taxonomies]
+  tag = 'tags'
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+  [markup.highlight]
+    noClasses = false
+
+[imaging.jpeg]
+  quality = 90
+
+[security]
+  # The theme builds its CSS with the Tailwind CLI, not allowed by default
+  [security.exec]
+    allow = ['^(dart-)?sass$', '^go$', '^git$', '^node$', '^postcss$', '^tailwindcss$']

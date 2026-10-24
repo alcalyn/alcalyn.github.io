@@ -1,0 +1,85 @@
+{{ define "main" }}
+{{ $isTaxonomyIndex := eq .Kind "taxonomy" }}
+{{ $isTerm := eq .Kind "term" }}
+{{ $isTaxonomy := or $isTerm $isTaxonomyIndex }}
+{{ $isSeriesTerm := and $isTerm (eq .Type "series") }}
+<header class="home-hero">
+    <div class="prompt">~/{{ trim .RelPermalink "/" | default "posts" }}</div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    {{ if $isTaxonomyIndex }}
+        <p class="sort-note">// sorted by post count, most used first</p>
+    {{ end }}
+</header>
+
+<ul class="timeline {{ if $isTaxonomy }}timeline--no-date{{ end }}">
+    {{ if $isTaxonomyIndex }}
+        {{ $terms := index .Site.Taxonomies .Data.Plural }}
+        {{ range $terms.ByCount }}
+            <li class="timeline-item">
+                <a href="{{ .Page.RelPermalink }}" class="title">{{ .Page.Title }}<span class="tag-count">{{ .Count }}</span></a>
+            </li>
+        {{ end }}
+    {{ else if $isTerm }}
+        {{ range .Pages }}
+            <li class="timeline-item">
+                <a href="{{ .RelPermalink }}" class="title">
+                    {{ .Title }}
+                    {{ if and (not $isSeriesTerm) .Params.series }}
+                        {{ $seriesTerm := .Params.series }}
+                        {{ $seriesPage := $.Site.GetPage (print "series/" ($seriesTerm | urlize)) }}
+                        {{ $seriesLabel := $seriesTerm }}
+                        {{ with $seriesPage }}{{ $seriesLabel = .LinkTitle }}{{ end }}
+                        <span class="badge-series">{{ $seriesLabel }}</span>
+                    {{ end }}
+                </a>
+                {{ with .Params.tags }}
+                <ul class="tags">
+                    {{ range . }}
+                        {{ $tagTerm := . }}
+                        {{ $tagPage := $.Site.GetPage (print "tags/" ($tagTerm | urlize)) }}
+                        {{ $tagLabel := $tagTerm }}
+                        {{ with $tagPage }}{{ $tagLabel = .LinkTitle }}{{ end }}
+                        <li><a class="tag" href="{{ "tags/" | absLangURL }}{{ $tagTerm | urlize }}">{{ $tagLabel }}</a></li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </li>
+        {{ end }}
+    {{ else }}
+        {{ range .Pages.GroupByDate "2006" }}
+            <li class="timeline-year">// {{ .Key }}</li>
+            {{ range .Pages }}
+                <li class="timeline-item">
+                    <span class="date"><time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format "Jan 02" }}</time></span>
+                    <a href="{{ .RelPermalink }}" class="title">
+                        {{ .Title }}{{ if .Params.project }} <span class="badge-project">project</span>{{ end }}
+                        {{ with .Params.series }}
+                            {{ $seriesTerm := . }}
+                            {{ $seriesPage := $.Site.GetPage (print "series/" ($seriesTerm | urlize)) }}
+                            {{ $seriesLabel := $seriesTerm }}
+                            {{ with $seriesPage }}{{ $seriesLabel = .LinkTitle }}{{ end }}
+                            <span class="badge-series">{{ $seriesLabel }}</span>
+                        {{ end }}
+                    </a>
+                    {{/* Added: summary under the title, like on the home page */}}
+                    {{ with (or .Description .Summary) }}
+                        <p class="summary">{{ . | plainify | truncate 160 }}</p>
+                    {{ end }}
+                    {{ with .Params.tags }}
+                    <ul class="tags">
+                        {{ range . }}
+                            {{ $tagTerm := . }}
+                            {{ $tagPage := $.Site.GetPage (print "tags/" ($tagTerm | urlize)) }}
+                            {{ $tagLabel := $tagTerm }}
+                            {{ with $tagPage }}{{ $tagLabel = .LinkTitle }}{{ end }}
+                            <li><span class="tag">{{ $tagLabel }}</span></li>
+                        {{ end }}
+                    </ul>
+                    {{ end }}
+                </li>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+</ul>
+{{ end }}
