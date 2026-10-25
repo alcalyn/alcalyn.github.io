@@ -54,6 +54,8 @@ hugo new content posts/my-new-post/index.fr.md
 
 New posts are created with `draft = true`. Remove that line (or set it to `false`) to publish the post.
 
+To group posts about a project, set `series = 'playhex'` in the front matter (devlogs also get the `devlog` tag). The series page is defined in `content/series/<name>/`, and `/series/playhex/` redirects to it.
+
 Insert images with the Markdown syntax, the caption goes in the title: `![Alt text](image.png "Caption")`.
 A post or project image (`featuredImage`) lives in `static/images/`.
 

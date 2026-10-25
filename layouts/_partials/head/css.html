@@ -1,0 +1,34 @@
+{{/* No-flash theme bootstrap. Runs before paint so dark mode is applied
+     before first render, avoiding the white flash. */}}
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var useDark = stored ? stored === 'dark' : prefersDark || true;
+      if (useDark) {
+        document.documentElement.classList.add('dark-theme');
+      }
+    } catch (e) {}
+  })();
+</script>
+
+{{/* Added: per-series accent color, set with `accent` in content/series/<name>/_index.*.md */}}
+{{ $seriesPage := false }}
+{{ if and (eq .Kind "term") (eq .Type "series") }}
+    {{ $seriesPage = . }}
+{{ else if .Params.series }}
+    {{ $seriesPage = site.GetPage (print "series/" (.Params.series | urlize)) }}
+{{ end }}
+{{ with $seriesPage }}
+    {{ with .Params.accent }}
+<style>
+  :root {
+    --color-accent: {{ . | safeCSS }};
+    --color-accent-soft: color-mix(in srgb, {{ . | safeCSS }} 60%, white);
+    --color-accent-strong: color-mix(in srgb, {{ . | safeCSS }} 80%, black);
+    --color-accent-glow: color-mix(in srgb, {{ . | safeCSS }} 18%, transparent);
+  }
+</style>
+    {{ end }}
+{{ end }}
