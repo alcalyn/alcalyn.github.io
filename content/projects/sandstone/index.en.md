@@ -1,15 +1,12 @@
----
-title: Sandstone
-date: '2017-01-01'
-aliases:
-- /../projects/2017-01-01-sandstone/
-- /../projects/sandstone/
-summary: PHP microframework to build a real-time RestApi.
-featuredImage: /images/projects/sandstone/sandstone-teaser.png
-project: true
-tags:
-- php
----
++++
+aliases = ['/../projects/2017-01-01-sandstone/', '/../projects/sandstone/']
+date = '2017-01-01'
+featuredImage = '/images/projects/sandstone/sandstone-teaser.png'
+project = true
+summary = 'PHP microframework to build a real-time RestApi.'
+tags = ['php']
+title = 'Sandstone'
++++
 
 TLDR: [See project here !](https://eole-io.github.io/sandstone-doc/)
 

@@ -1,11 +1,10 @@
----
-date: '2019-03-24'
-summary: We drew and animated a character, and developed its movement in Javascript so that it follows the mouse.
-title: Discovering pixi.js to animate a character with Javascript
-featuredImage: /images/posts/pixijs-dragonbones/image-illustration-pixijs-dragonbones.jpg
-tags:
-- javascript
----
++++
+date = '2019-03-24'
+featuredImage = '/images/posts/pixijs-dragonbones/image-illustration-pixijs-dragonbones.jpg'
+summary = 'We drew and animated a character, and developed its movement in Javascript so that it follows the mouse.'
+tags = ['javascript']
+title = 'Discovering pixi.js to animate a character with Javascript'
++++
 
 *This article was translated from French.*
 

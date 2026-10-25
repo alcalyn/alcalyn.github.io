@@ -1,12 +1,11 @@
----
-title: Réseau de neurones en PHP
-date: '2017-06-01'
-summary: Réseau de neurones de reconnaissance de chiffres.
-featuredImage: /images/projects/php-neural-network/php-neural-network.png
-project: true
-tags:
-- php
----
++++
+date = '2017-06-01'
+featuredImage = '/images/projects/php-neural-network/php-neural-network.png'
+project = true
+summary = 'Réseau de neurones de reconnaissance de chiffres.'
+tags = ['php']
+title = 'Réseau de neurones en PHP'
++++
 
 *Cet article a été traduit de l'anglais.*
 

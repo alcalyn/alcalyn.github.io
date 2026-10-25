@@ -1,12 +1,10 @@
----
-date: '2017-09-01'
-aliases:
-- /../control-robot-two-engines/
-summary: Réaliser un petit robot qui avance, recule et tourne, avec une Raspberry Pi, un pont en H et deux moteurs.
-title: Contrôler un robot à deux roues avec Raspberry Pi
-tags:
-- raspberry-pi
----
++++
+aliases = ['/../control-robot-two-engines/']
+date = '2017-09-01'
+summary = 'Réaliser un petit robot qui avance, recule et tourne, avec une Raspberry Pi, un pont en H et deux moteurs.'
+tags = ['raspberry-pi']
+title = 'Contrôler un robot à deux roues avec Raspberry Pi'
++++
 
 
 Débutant en électronique, dans le cadre d'un projet, je viens juste de réaliser

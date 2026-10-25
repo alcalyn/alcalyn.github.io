@@ -1,13 +1,11 @@
----
-title: Jeu de Hex en ligne
-date: '2024-01-29'
-summary: Jeu de plateau Hex en ligne.
-featuredImage: /images/projects/hex-online-game/teaser.png
-project: true
-tags:
-- javascript
-- game
----
++++
+date = '2024-01-29'
+featuredImage = '/images/projects/hex-online-game/teaser.png'
+project = true
+summary = 'Jeu de plateau Hex en ligne.'
+tags = ['javascript', 'game']
+title = 'Jeu de Hex en ligne'
++++
 
 *Cet article a été traduit de l'anglais.*
 

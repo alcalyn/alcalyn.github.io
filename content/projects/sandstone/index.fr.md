@@ -1,12 +1,11 @@
----
-title: Sandstone
-date: '2017-01-01'
-summary: Microframework PHP pour construire une RestApi temps réel.
-featuredImage: /images/projects/sandstone/sandstone-teaser.png
-project: true
-tags:
-- php
----
++++
+date = '2017-01-01'
+featuredImage = '/images/projects/sandstone/sandstone-teaser.png'
+project = true
+summary = 'Microframework PHP pour construire une RestApi temps réel.'
+tags = ['php']
+title = 'Sandstone'
++++
 
 *Cet article a été traduit de l'anglais.*
 

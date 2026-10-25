@@ -1,14 +1,12 @@
----
-title: Matomo Signup Plugin
-date: '2019-04-20'
-aliases:
-- /../projects/2019-04-20-matomo-signup-plugin/2019-04-20-matomo-signup-plugin/
-summary: Allow new users to signup to your Matomo instance
-featuredImage: /images/projects/matomo-signup-plugin/land.png
-project: true
-tags:
-- php
----
++++
+aliases = ['/../projects/2019-04-20-matomo-signup-plugin/2019-04-20-matomo-signup-plugin/']
+date = '2019-04-20'
+featuredImage = '/images/projects/matomo-signup-plugin/land.png'
+project = true
+summary = 'Allow new users to signup to your Matomo instance'
+tags = ['php']
+title = 'Matomo Signup Plugin'
++++
 
 - Matomo marketplace Signup plugin: <https://plugins.matomo.org/Signup>
 - Github repository: <https://github.com/alcalyn/matomo-plugin-signup>

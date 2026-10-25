@@ -1,10 +1,9 @@
----
-date: '2017-02-13'
-summary: Êtes-vous sûr que PHP n'est pas capable d'utiliser les websockets, d'envoyer des notifications push et de faire une application temps réel ?
-title: Créer une application de poker planning avec PHP et les websockets
-tags:
-- php
----
++++
+date = '2017-02-13'
+summary = "Êtes-vous sûr que PHP n'est pas capable d'utiliser les websockets, d'envoyer des notifications push et de faire une application temps réel ?"
+tags = ['php']
+title = 'Créer une application de poker planning avec PHP et les websockets'
++++
 
 *Cet article a été traduit de l'anglais.*
 

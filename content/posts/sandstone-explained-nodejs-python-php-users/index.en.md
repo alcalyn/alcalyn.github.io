@@ -1,12 +1,10 @@
----
-date: '2017-10-05'
-aliases:
-- /../sandstone-explained-nodejs-python-php-users/
-summary: If you're a NodeJS, Python or PHP user, you may already know expressJS, Flask or Silex. I'll explain Sandstone assuming you already know one of these libraries.
-title: Sandstone explained to NodeJS, Python or PHP users
-tags:
-- php
----
++++
+aliases = ['/../sandstone-explained-nodejs-python-php-users/']
+date = '2017-10-05'
+summary = "If you're a NodeJS, Python or PHP user, you may already know expressJS, Flask or Silex. I'll explain Sandstone assuming you already know one of these libraries."
+tags = ['php']
+title = 'Sandstone explained to NodeJS, Python or PHP users'
++++
 
 
 [Sandstone](https://github.com/eole-io/sandstone) is a microframework

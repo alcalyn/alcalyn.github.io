@@ -1,15 +1,12 @@
----
-title: Hex Online Game
-date: '2024-01-29'
-aliases:
-- /../projects/2024-01-29-hex-online-game/2024-01-29-hex-online-game/
-summary: Hex online board game.
-featuredImage: /images/projects/hex-online-game/teaser.png
-project: true
-tags:
-- javascript
-- game
----
++++
+aliases = ['/../projects/2024-01-29-hex-online-game/2024-01-29-hex-online-game/']
+date = '2024-01-29'
+featuredImage = '/images/projects/hex-online-game/teaser.png'
+project = true
+summary = 'Hex online board game.'
+tags = ['javascript', 'game']
+title = 'Hex Online Game'
++++
 
 TLDR: [Play Hex: https://playhex.org](https://playhex.org)
 

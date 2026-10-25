@@ -1,45 +1,60 @@
----
-date: '2017-09-09'
-aliases:
-- /../raspberry-connectee-telephone/
-summary: Vous utilisez déjà SSH pour contrôler votre Raspberry en ligne de commande. Mais si vous vous déplacez avec votre Raspberry ?
-title: Contrôlez votre Raspberry Pi depuis votre téléphone pour la rendre plus portable
-tags:
-- raspberry-pi
-workflow-configure:
-- image_path: a-configure-1.png
-  alt: Capture d'écran Android point d'accès wi-fi
-  title: Paramètres Android
-- image_path: a-configure-2.png
-  alt: Capture d'écran Android point d'accès wi-fi
-  title: Paramètres Android avancés
-- image_path: a-configure-3.png
-  alt: Capture d'écran Android point d'accès wi-fi
-  title: Partage réseau mobile
-- image_path: a-configure-4.png
-  alt: Configuration point d'accès wi-fi
-  title: Configuration point d'accès wi-fi
-workflow-connect:
-- image_path: c-connect-1.png
-  alt: La Raspberry Pi s'est connectée à notre téléphone
-  title: La Raspberry Pi s'est connectée à notre téléphone
-- image_path: c-connect-2.png
-  alt: Liste des clients connéctés à notre point d'accès wi-fi
-  title: Liste des clients connéctés à notre point d'accès wi-fi
-- image_path: c-connect-3.png
-  alt: Capture d'écran Android point d'accès wi-fi
-  title: Adresse IP attribuée à la Raspberry par le téléphone
-workflow-console:
-- image_path: d-console-1.png
-  alt: Capture d'écran Android ConnectBot Raspberry Pi
-  title: Connexion à la Raspberry Pi avec ConnectBot
-- image_path: d-console-2.png
-  alt: Capture d'écran Android ConnectBot Raspberry Pi
-  title: Saisir le mot de passe demandé par SSH
-- image_path: d-console-3.png
-  alt: Capture d'écran Android ConnectBot Raspberry Pi
-  title: On a pris la main de notre Raspberry
----
++++
+aliases = ['/../raspberry-connectee-telephone/']
+date = '2017-09-09'
+summary = 'Vous utilisez déjà SSH pour contrôler votre Raspberry en ligne de commande. Mais si vous vous déplacez avec votre Raspberry ?'
+tags = ['raspberry-pi']
+title = 'Contrôlez votre Raspberry Pi depuis votre téléphone pour la rendre plus portable'
+
+[[workflow-configure]]
+  alt = "Capture d'écran Android point d'accès wi-fi"
+  image_path = 'a-configure-1.png'
+  title = 'Paramètres Android'
+
+[[workflow-configure]]
+  alt = "Capture d'écran Android point d'accès wi-fi"
+  image_path = 'a-configure-2.png'
+  title = 'Paramètres Android avancés'
+
+[[workflow-configure]]
+  alt = "Capture d'écran Android point d'accès wi-fi"
+  image_path = 'a-configure-3.png'
+  title = 'Partage réseau mobile'
+
+[[workflow-configure]]
+  alt = "Configuration point d'accès wi-fi"
+  image_path = 'a-configure-4.png'
+  title = "Configuration point d'accès wi-fi"
+
+[[workflow-connect]]
+  alt = "La Raspberry Pi s'est connectée à notre téléphone"
+  image_path = 'c-connect-1.png'
+  title = "La Raspberry Pi s'est connectée à notre téléphone"
+
+[[workflow-connect]]
+  alt = "Liste des clients connéctés à notre point d'accès wi-fi"
+  image_path = 'c-connect-2.png'
+  title = "Liste des clients connéctés à notre point d'accès wi-fi"
+
+[[workflow-connect]]
+  alt = "Capture d'écran Android point d'accès wi-fi"
+  image_path = 'c-connect-3.png'
+  title = 'Adresse IP attribuée à la Raspberry par le téléphone'
+
+[[workflow-console]]
+  alt = "Capture d'écran Android ConnectBot Raspberry Pi"
+  image_path = 'd-console-1.png'
+  title = 'Connexion à la Raspberry Pi avec ConnectBot'
+
+[[workflow-console]]
+  alt = "Capture d'écran Android ConnectBot Raspberry Pi"
+  image_path = 'd-console-2.png'
+  title = 'Saisir le mot de passe demandé par SSH'
+
+[[workflow-console]]
+  alt = "Capture d'écran Android ConnectBot Raspberry Pi"
+  image_path = 'd-console-3.png'
+  title = 'On a pris la main de notre Raspberry'
++++
 
 
 Vous utilisez déjà SSH pour contrôler votre Raspberry en ligne de commande.

@@ -1,15 +1,12 @@
----
-title: Openhex
-date: '2018-03-01'
-aliases:
-- /../projects/2018-03-01-openhex/
-summary: Simple strategy game inspired by Slay.
-featuredImage: /images/projects/openhex/openhex-teaser.png
-project: true
-tags:
-- javascript
-- game
----
++++
+aliases = ['/../projects/2018-03-01-openhex/']
+date = '2018-03-01'
+featuredImage = '/images/projects/openhex/openhex-teaser.png'
+project = true
+summary = 'Simple strategy game inspired by Slay.'
+tags = ['javascript', 'game']
+title = 'Openhex'
++++
 
 TLDR: [Play it here !](https://alcalyn.github.io/openhex/#/)
 

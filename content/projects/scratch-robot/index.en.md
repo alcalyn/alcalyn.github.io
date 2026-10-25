@@ -1,15 +1,12 @@
----
-title: Scratch Robot
-date: '2018-04-10'
-aliases:
-- /../projects/2018-04-10-scratch-robot/
-summary: Control a robot with scratch blocks language.
-featuredImage: /images/projects/scratch-robot/fond.jpg
-project: true
-tags:
-- php
-- raspberry-pi
----
++++
+aliases = ['/../projects/2018-04-10-scratch-robot/']
+date = '2018-04-10'
+featuredImage = '/images/projects/scratch-robot/fond.jpg'
+project = true
+summary = 'Control a robot with scratch blocks language.'
+tags = ['php', 'raspberry-pi']
+title = 'Scratch Robot'
++++
 
 TLDR, see it in action:
 

@@ -1,12 +1,10 @@
----
-date: '2017-02-13'
-aliases:
-- /../poker-planning-php-websockets/
-summary: Are you sure that PHP is not able to use websockets, send push notifications, and make a real-time application ?
-title: Creating a poker planning application with PHP and websockets
-tags:
-- php
----
++++
+aliases = ['/../poker-planning-php-websockets/']
+date = '2017-02-13'
+summary = 'Are you sure that PHP is not able to use websockets, send push notifications, and make a real-time application ?'
+tags = ['php']
+title = 'Creating a poker planning application with PHP and websockets'
++++
 
 
 ![Poker planning application screenshot](app-screenshot.png "Poker planning application screenshot")

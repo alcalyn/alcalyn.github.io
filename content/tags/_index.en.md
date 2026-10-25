@@ -1,6 +1,4 @@
----
-title: Tags
-aliases:
-- /../tags/
-- /../categories/
----
++++
+aliases = ['/../tags/', '/../categories/']
+title = 'Tags'
++++

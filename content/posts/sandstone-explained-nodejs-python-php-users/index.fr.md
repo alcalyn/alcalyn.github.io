@@ -1,10 +1,9 @@
----
-date: '2017-10-05'
-summary: Si vous utilisez NodeJS, Python ou PHP, vous connaissez peut-être déjà expressJS, Flask ou Silex. Je vais expliquer Sandstone en partant du principe que vous connaissez l'une de ces bibliothèques.
-title: Sandstone expliqué aux utilisateurs de NodeJS, Python ou PHP
-tags:
-- php
----
++++
+date = '2017-10-05'
+summary = "Si vous utilisez NodeJS, Python ou PHP, vous connaissez peut-être déjà expressJS, Flask ou Silex. Je vais expliquer Sandstone en partant du principe que vous connaissez l'une de ces bibliothèques."
+tags = ['php']
+title = 'Sandstone expliqué aux utilisateurs de NodeJS, Python ou PHP'
++++
 
 *Cet article a été traduit de l'anglais.*
 

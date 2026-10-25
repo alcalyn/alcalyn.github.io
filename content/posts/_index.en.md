@@ -1,5 +1,4 @@
----
-title: Blog
-aliases:
-- /../page2/
----
++++
+aliases = ['/../page2/']
+title = 'Blog'
++++

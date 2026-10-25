@@ -1,10 +1,9 @@
----
-date: '2016-11-09'
-summary: Things not to forget when starting and maintaining an open source project.
-title: Starting an open source PHP project
-tags:
-- php
----
++++
+date = '2016-11-09'
+summary = 'Things not to forget when starting and maintaining an open source project.'
+tags = ['php']
+title = 'Starting an open source PHP project'
++++
 
 *This article was translated from French.*
 

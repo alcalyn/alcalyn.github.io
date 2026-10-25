@@ -1,10 +1,9 @@
----
-date: '2017-09-01'
-summary: Build a small robot that can move forward, backward and turn, with a Raspberry Pi, an H-bridge and two motors.
-title: Control a two-wheeled robot with Raspberry Pi
-tags:
-- raspberry-pi
----
++++
+date = '2017-09-01'
+summary = 'Build a small robot that can move forward, backward and turn, with a Raspberry Pi, an H-bridge and two motors.'
+tags = ['raspberry-pi']
+title = 'Control a two-wheeled robot with Raspberry Pi'
++++
 
 *This article was translated from French.*
 

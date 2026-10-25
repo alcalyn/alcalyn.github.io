@@ -1,13 +1,11 @@
----
-date: '2018-03-14'
-aliases:
-- /../set-up-continuous-translation-i18next-weblate/
-summary: I recently created a ReactJS project with i18next, and installed Weblate, a free/libre translation interface, to allow anyone help in translating the application.
-title: Set up continuous translation with Weblate and i18next
-featuredImage: /images/posts/set-up-continuous-translation-i18next-weblate/weblate-screenshot.jpg
-tags:
-- javascript
----
++++
+aliases = ['/../set-up-continuous-translation-i18next-weblate/']
+date = '2018-03-14'
+featuredImage = '/images/posts/set-up-continuous-translation-i18next-weblate/weblate-screenshot.jpg'
+summary = 'I recently created a ReactJS project with i18next, and installed Weblate, a free/libre translation interface, to allow anyone help in translating the application.'
+tags = ['javascript']
+title = 'Set up continuous translation with Weblate and i18next'
++++
 
 
 ![Weblate screenshot](weblate-interface.png "Weblate page of my project 'OpenHex'.")

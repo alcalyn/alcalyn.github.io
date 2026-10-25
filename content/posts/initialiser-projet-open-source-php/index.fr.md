@@ -1,12 +1,10 @@
----
-date: '2016-11-09'
-aliases:
-- /../initialiser-projet-open-source-php/
-summary: Choses à ne pas oublier lorsqu'on démarre et maintient un projet open source.
-title: Initialisation d'un projet open source PHP
-tags:
-- php
----
++++
+aliases = ['/../initialiser-projet-open-source-php/']
+date = '2016-11-09'
+summary = "Choses à ne pas oublier lorsqu'on démarre et maintient un projet open source."
+tags = ['php']
+title = "Initialisation d'un projet open source PHP"
++++
 
 
 Libérer un projet existant ou en créer un nouveau de manière

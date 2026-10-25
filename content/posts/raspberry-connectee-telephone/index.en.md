@@ -1,43 +1,59 @@
----
-date: '2017-09-09'
-summary: You already use SSH to control your Raspberry from the command line. But what if you move around with your Raspberry?
-title: Control your Raspberry Pi from your phone to make it more portable
-tags:
-- raspberry-pi
-workflow-configure:
-- image_path: a-configure-1.png
-  alt: Android wi-fi hotspot screenshot
-  title: Android settings
-- image_path: a-configure-2.png
-  alt: Android wi-fi hotspot screenshot
-  title: Advanced Android settings
-- image_path: a-configure-3.png
-  alt: Android wi-fi hotspot screenshot
-  title: Mobile network sharing
-- image_path: a-configure-4.png
-  alt: Wi-fi hotspot configuration
-  title: Wi-fi hotspot configuration
-workflow-connect:
-- image_path: c-connect-1.png
-  alt: The Raspberry Pi connected to our phone
-  title: The Raspberry Pi connected to our phone
-- image_path: c-connect-2.png
-  alt: List of clients connected to our wi-fi hotspot
-  title: List of clients connected to our wi-fi hotspot
-- image_path: c-connect-3.png
-  alt: Android wi-fi hotspot screenshot
-  title: IP address given to the Raspberry by the phone
-workflow-console:
-- image_path: d-console-1.png
-  alt: Android ConnectBot Raspberry Pi screenshot
-  title: Connecting to the Raspberry Pi with ConnectBot
-- image_path: d-console-2.png
-  alt: Android ConnectBot Raspberry Pi screenshot
-  title: Typing the password asked by SSH
-- image_path: d-console-3.png
-  alt: Android ConnectBot Raspberry Pi screenshot
-  title: We took control of our Raspberry
----
++++
+date = '2017-09-09'
+summary = 'You already use SSH to control your Raspberry from the command line. But what if you move around with your Raspberry?'
+tags = ['raspberry-pi']
+title = 'Control your Raspberry Pi from your phone to make it more portable'
+
+[[workflow-configure]]
+  alt = 'Android wi-fi hotspot screenshot'
+  image_path = 'a-configure-1.png'
+  title = 'Android settings'
+
+[[workflow-configure]]
+  alt = 'Android wi-fi hotspot screenshot'
+  image_path = 'a-configure-2.png'
+  title = 'Advanced Android settings'
+
+[[workflow-configure]]
+  alt = 'Android wi-fi hotspot screenshot'
+  image_path = 'a-configure-3.png'
+  title = 'Mobile network sharing'
+
+[[workflow-configure]]
+  alt = 'Wi-fi hotspot configuration'
+  image_path = 'a-configure-4.png'
+  title = 'Wi-fi hotspot configuration'
+
+[[workflow-connect]]
+  alt = 'The Raspberry Pi connected to our phone'
+  image_path = 'c-connect-1.png'
+  title = 'The Raspberry Pi connected to our phone'
+
+[[workflow-connect]]
+  alt = 'List of clients connected to our wi-fi hotspot'
+  image_path = 'c-connect-2.png'
+  title = 'List of clients connected to our wi-fi hotspot'
+
+[[workflow-connect]]
+  alt = 'Android wi-fi hotspot screenshot'
+  image_path = 'c-connect-3.png'
+  title = 'IP address given to the Raspberry by the phone'
+
+[[workflow-console]]
+  alt = 'Android ConnectBot Raspberry Pi screenshot'
+  image_path = 'd-console-1.png'
+  title = 'Connecting to the Raspberry Pi with ConnectBot'
+
+[[workflow-console]]
+  alt = 'Android ConnectBot Raspberry Pi screenshot'
+  image_path = 'd-console-2.png'
+  title = 'Typing the password asked by SSH'
+
+[[workflow-console]]
+  alt = 'Android ConnectBot Raspberry Pi screenshot'
+  image_path = 'd-console-3.png'
+  title = 'We took control of our Raspberry'
++++
 
 *This article was translated from French.*
 

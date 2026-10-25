@@ -1,6 +1,5 @@
----
-title: Projects
-aliases:
-- /../projects/
----
++++
+aliases = ['/../projects/']
+title = 'Projects'
++++
 Here are my projects.

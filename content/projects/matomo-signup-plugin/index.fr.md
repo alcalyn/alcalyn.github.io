@@ -1,12 +1,11 @@
----
-title: Plugin d'inscription Matomo
-date: '2019-04-20'
-summary: Permettre à de nouveaux utilisateurs de s'inscrire sur votre instance Matomo
-featuredImage: /images/projects/matomo-signup-plugin/land.png
-project: true
-tags:
-- php
----
++++
+date = '2019-04-20'
+featuredImage = '/images/projects/matomo-signup-plugin/land.png'
+project = true
+summary = "Permettre à de nouveaux utilisateurs de s'inscrire sur votre instance Matomo"
+tags = ['php']
+title = "Plugin d'inscription Matomo"
++++
 
 *Cet article a été traduit de l'anglais.*
 

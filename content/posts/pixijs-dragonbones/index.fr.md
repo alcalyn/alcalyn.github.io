@@ -1,13 +1,11 @@
----
-date: '2019-03-24'
-aliases:
-- /../pixijs-dragonbones/
-summary: Nous avons dessiné et animé un personnage, et développé en Javascript son mouvement pour qu'il suive la souris.
-title: Découverte de pixi.js pour animer un personnage avec Javascript
-featuredImage: /images/posts/pixijs-dragonbones/image-illustration-pixijs-dragonbones.jpg
-tags:
-- javascript
----
++++
+aliases = ['/../pixijs-dragonbones/']
+date = '2019-03-24'
+featuredImage = '/images/posts/pixijs-dragonbones/image-illustration-pixijs-dragonbones.jpg'
+summary = "Nous avons dessiné et animé un personnage, et développé en Javascript son mouvement pour qu'il suive la souris."
+tags = ['javascript']
+title = 'Découverte de pixi.js pour animer un personnage avec Javascript'
++++
 
 
 Dans l'optique de faire un jeu style point and click sur navigateur, nous avons du dessiner et animer un personnage, et développer en Javascript son mouvement pour qu'il suive la souris.

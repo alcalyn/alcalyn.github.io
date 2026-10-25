@@ -1,13 +1,11 @@
----
-title: Scratch Robot
-date: '2018-04-10'
-summary: Contrôler un robot avec le langage de blocs Scratch.
-featuredImage: /images/projects/scratch-robot/fond.jpg
-project: true
-tags:
-- php
-- raspberry-pi
----
++++
+date = '2018-04-10'
+featuredImage = '/images/projects/scratch-robot/fond.jpg'
+project = true
+summary = 'Contrôler un robot avec le langage de blocs Scratch.'
+tags = ['php', 'raspberry-pi']
+title = 'Scratch Robot'
++++
 
 *Cet article a été traduit de l'anglais.*
 

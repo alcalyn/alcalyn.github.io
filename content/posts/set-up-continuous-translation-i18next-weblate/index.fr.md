@@ -1,11 +1,10 @@
----
-date: '2018-03-14'
-summary: J'ai récemment créé un projet ReactJS avec i18next, et installé Weblate, une interface de traduction libre, pour permettre à tout le monde d'aider à traduire l'application.
-title: Mettre en place la traduction continue avec Weblate et i18next
-featuredImage: /images/posts/set-up-continuous-translation-i18next-weblate/weblate-screenshot.jpg
-tags:
-- javascript
----
++++
+date = '2018-03-14'
+featuredImage = '/images/posts/set-up-continuous-translation-i18next-weblate/weblate-screenshot.jpg'
+summary = "J'ai récemment créé un projet ReactJS avec i18next, et installé Weblate, une interface de traduction libre, pour permettre à tout le monde d'aider à traduire l'application."
+tags = ['javascript']
+title = 'Mettre en place la traduction continue avec Weblate et i18next'
++++
 
 *Cet article a été traduit de l'anglais.*
 

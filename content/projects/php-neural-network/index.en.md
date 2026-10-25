@@ -1,14 +1,12 @@
----
-title: Php Neural Network
-date: '2017-06-01'
-aliases:
-- /../projects/2017-06-01-php-neural-network/
-summary: Number recognition neural network.
-featuredImage: /images/projects/php-neural-network/php-neural-network.png
-project: true
-tags:
-- php
----
++++
+aliases = ['/../projects/2017-06-01-php-neural-network/']
+date = '2017-06-01'
+featuredImage = '/images/projects/php-neural-network/php-neural-network.png'
+project = true
+summary = 'Number recognition neural network.'
+tags = ['php']
+title = 'Php Neural Network'
++++
 
 TLDR: [See project here !](https://github.com/alcalyn/number-recognition-neural-network)
 

@@ -1,13 +1,11 @@
----
-title: Openhex
-date: '2018-03-01'
-summary: Jeu de stratégie simple inspiré de Slay.
-featuredImage: /images/projects/openhex/openhex-teaser.png
-project: true
-tags:
-- javascript
-- game
----
++++
+date = '2018-03-01'
+featuredImage = '/images/projects/openhex/openhex-teaser.png'
+project = true
+summary = 'Jeu de stratégie simple inspiré de Slay.'
+tags = ['javascript', 'game']
+title = 'Openhex'
++++
 
 *Cet article a été traduit de l'anglais.*
 
