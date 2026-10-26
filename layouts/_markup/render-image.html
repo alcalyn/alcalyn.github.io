@@ -7,8 +7,13 @@
     {{- with .Page.Resources.GetMatch $src -}}
         {{- $img = . -}}
     {{- else -}}
-        {{- with resources.Get $src -}}
+        {{- /* Bundle image not attached to this page (e.g. "foo.png" while the bundle has no default language page): look it up in the content mount */ -}}
+        {{- with and .Page.File (resources.Get (path.Join "content" .Page.File.Dir $src)) -}}
             {{- $img = . -}}
+        {{- else -}}
+            {{- with resources.Get $src -}}
+                {{- $img = . -}}
+            {{- end -}}
         {{- end -}}
     {{- end -}}
 {{- end -}}

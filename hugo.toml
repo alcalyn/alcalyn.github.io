@@ -69,3 +69,14 @@ enableEmoji = true
   # The theme builds its CSS with the Tailwind CLI, not allowed by default
   [security.exec]
     allow = ['^(dart-)?sass$', '^go$', '^git$', '^node$', '^postcss$', '^tailwindcss$']
+
+# Expose content images as global resources, so the image render hook can find
+# a bundle image with no language suffix even when the bundle has no page in the
+# default language (Hugo only attaches such images to the default language page).
+[[module.mounts]]
+  source = 'assets'
+  target = 'assets'
+[[module.mounts]]
+  source = 'content'
+  target = 'assets/content'
+  files = ['**.png', '**.jpg', '**.jpeg', '**.webp', '**.gif']
