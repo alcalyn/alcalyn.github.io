@@ -62,8 +62,17 @@ enableEmoji = true
   [markup.highlight]
     noClasses = false
 
+[imaging]
+  resampleFilter = 'lanczos'
+
 [imaging.jpeg]
   quality = 90
+
+# Most images are screenshots and diagrams: Hugo's default (quality 75, photo hint) blurs them
+[imaging.webp]
+  quality = 90
+  hint = 'drawing'
+  method = 6
 
 [security]
   # The theme builds its CSS with the Tailwind CLI, not allowed by default
